@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CryptoDetailViewModel@Inject constructor(private val repository: CryptoRepository):ViewModel() {
-    suspend fun getCrypto():Resource<Crypto>{
+    suspend fun getCrypto(id: String):Resource<Crypto>{
         return repository.getCrypto()
     }
 }

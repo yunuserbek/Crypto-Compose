@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
                         val cryptPrice = remember {
                             it.arguments?.getString("cryptoPrice")
                         }
-                        CryptoDetailScreen(id = cryptoID?:"", price =cryptoID?:"" , navController = navController)
+                        CryptoDetailScreen(id = cryptoID?:"", price =cryptPrice?:"" , navController = navController)
 
                     }
 

@@ -9,8 +9,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.*
 import androidx.compose.runtime.*
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
@@ -23,7 +21,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.example.crypto_compose.model.Crypto
 import com.example.crypto_compose.model.CryptoListItem
 import com.example.crypto_compose.viewmodel.CryptoListViewModel
 
@@ -34,12 +31,12 @@ fun CryptoListScreen(
 ) {
     Surface(
         color = MaterialTheme.colors.secondary,
-        modifier = androidx.compose.ui.Modifier.fillMaxSize()
+        modifier = Modifier.fillMaxSize()
     ) {
         Column {
             Text(
-                text = "CryptoCrazy",
-                androidx.compose.ui.Modifier
+                text = "Crypto",
+                Modifier
                     .fillMaxWidth()
                     .padding(20.dp),
                 textAlign = TextAlign.Center,
